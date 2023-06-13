@@ -1,6 +1,6 @@
 import unittest
 
-from boardingpassfinder import test_func
+from boardingpassfinder import decode_seat_number_from_boarding_pass, find_seat_from_scanned_boarding_pass
 
 filename = "testdata.txt"
 
@@ -31,7 +31,6 @@ class MyModuleTestCase(unittest.TestCase):
                 test_set.add(line)
 
         result = find_seat_from_scanned_boarding_pass(test_set)
-        print("Result = " + str(result) )
         self.assertEqual(0, 0)
 
 if __name__ == '__main__':
