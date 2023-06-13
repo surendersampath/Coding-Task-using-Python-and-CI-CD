@@ -5,7 +5,10 @@ from boardingpassfinder import decode_seat_number_from_boarding_pass, find_seat_
 filename = "testdata.txt"
 
 class MyModuleTestCase(unittest.TestCase):
-
+    """
+    Test case class for boardingpassfinder.
+    """
+    # Test Scenarios are derived from the examples.
     def testcase_seatnumber_1(self):
         result = decode_seat_number_from_boarding_pass("BFFFBBFRRR")
         self.assertEqual(result, 567)
@@ -23,8 +26,12 @@ class MyModuleTestCase(unittest.TestCase):
         self.assertEqual(result, 357)
 
     def testcase_find_your_seat(self):
-        test_set = set()
+        """
+        Test finding the missing seat number from a list of scanned boarding pass data.
+        """
 
+        test_set = set()
+        # Copying the test Data for Boarding Passes into a Set.
         with open(filename, "r") as file:
             for line in file:
                 line = line.strip()
