@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.6]
+        python-version: [3.8.17]
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python version 3.6
+      - name: Set up Python version 3.8.17
         uses: actions/setup-python@v2
         with:
           python-version: 3.8.17
