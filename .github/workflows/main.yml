@@ -14,4 +14,4 @@ jobs:
           python-version: 3.8.17
           architecture: x64
       - name: Run Test
-        run: python test_my_module.py
+        run: python unittests.py
