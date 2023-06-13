@@ -2,6 +2,8 @@ import unittest
 
 from boardingpassfinder import test_func
 
+filename = "testdata.txt"
+
 class MyModuleTestCase(unittest.TestCase):
 
     def testcase_seatnumber_1(self):
