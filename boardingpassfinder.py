@@ -27,9 +27,12 @@ def find_seat_from_scanned_boarding_pass(scanned_boarding_pass_data):
     seats = set(map(decode_seat_number_from_boarding_pass, scanned_boarding_pass_data))
     highest_seat_id = max(seats)
 
-    print("Sanity Check - Highest Seat Number :" + str(highest_seat_id))
     # Find the missing seat by checking consecutive seat IDs
     missing_seat_id = next(filter(lambda seat_id: seat_id not in seats and (seat_id + 1) in seats and (seat_id - 1) in seats,
                              range(highest_seat_id + 1)))
 
+    print("\nSanity Check - Highest Seat Number :" + str(highest_seat_id))
+    print("\nYour Seat Number :" + str(missing_seat_id))
+
+    
     return missing_seat_id
