@@ -18,3 +18,7 @@ def decode_seat_number_from_boarding_pass(boarding_pass_string):
     seat_id = row_number * 8 + col_number
 
     return seat_id
+
+
+def find_seat_from_scanned_boarding_pass ( scanned_boarding_pass_data ):
+    return -1
