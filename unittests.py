@@ -31,7 +31,7 @@ class MyModuleTestCase(unittest.TestCase):
                 test_set.add(line)
 
         result = find_seat_from_scanned_boarding_pass(test_set)
-        self.assertEqual(0, 0)
+        self.assertEqual(result, 640)
 
 if __name__ == '__main__':
     unittest.main()
