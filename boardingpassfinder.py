@@ -23,14 +23,14 @@ def decode_seat_number_from_boarding_pass(boarding_pass_string):
         return 0
 
     # Decode the row number.
-    row_string = boarding_pass_string[:7] #Extract Substring for the rows.
+    row_string = boarding_pass_string[:7]  # Extract Substring for the rows.
     row_binary = row_string.replace("F", "0").replace("B", "1")
-    row_number = int(row_binary, 2) #Convert 7 bit Binary to Decimal.
+    row_number = int(row_binary, 2)  # Convert 7 bit Binary to Decimal.
 
     # Decode the column number.
-    col_string = boarding_pass_string[7:] #Extract Substring for the columns.
+    col_string = boarding_pass_string[7:]  # Extract Substring for the columns.
     col_binary = col_string.replace("L", "0").replace("R", "1")
-    col_number = int(col_binary, 2) #Convert 3 bit Binary to Decimal.
+    col_number = int(col_binary, 2)  # Convert 3 bit Binary to Decimal.
 
     # Calculate the seat ID as per the formula given to generate UNIQUE seat ID.
     seat_id = row_number * 8 + col_number
