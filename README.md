@@ -4,9 +4,21 @@
 
 The Boarding Pass Finder is a Python module that decodes seat numbers from boarding pass strings and finds the missing seat number from a list of scanned boarding pass data by elimniation method.
 
+Approach to the problem :
+1. Use phone's camera to scan nearby boarding passes and store it a data source.
+2. Binary space partitioning to determine seat location.
+3. Decode the seat code by following the specified rules.
+4. Identify the row and column based on the seat code.
+5. Calculate the seat ID by multiplying the row by 8 and adding the column.
+6. Find the highest seat ID among all the boarding passes.
+7. Your seat is missing from the list, but seats with IDs +1 and -1 from yours will be present.
+8. Determine the ID of your seat.
+
+
 ## Requirements
 
 - Python 3.6 and above. Can be run in Github codespace.
+- Not dependent on any other Python libraries.
 
 ## Installation
 
