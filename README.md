@@ -26,7 +26,6 @@ No installation is required for the Boarding Pass Finder module. Simply clone th
 
 ## Usage
 
-
 1. Decode the seat number from a boarding pass string using the `decode_seat_number_from_boarding_pass` function:
 
 ```python
@@ -43,25 +42,33 @@ scanned_boarding_pass_data = {"BFFFBBFRRR", "FFFBBBFRRR", "BBFFBBFRLL"}
 missing_seat_number = find_seat_from_scanned_boarding_pass(scanned_boarding_pass_data)
 print(missing_seat_number)  # Output: 640
 ```
-
+Note : The test data can be edited in the file ```testdata.txt```
 ## Testing
 
-The module includes unit tests for the `decode_seat_number_from_boarding_pass` and `find_seat_from_scanned_boarding_pass` functions. This is included in the continous integration. So, every push on the main branch will automatically run these unit tests and will only fail on unittests failure.
+The module includes unit tests for the `decode_seat_number_from_boarding_pass` and `find_seat_from_scanned_boarding_pass` functions. 
+This is further extended by Github continous integration configured inside the workflow folder. 
+So, every push on the main branch will automatically run these unit tests and will only fail on unittests failure.
 The test cases can be executed by running the module as follows:
 
 ```bash
 python unittests.py
 ```
-
 The test results of the unit tests will be displayed in the console of the CI/CD pipeline.
 
 ## Logging
 
 The module utilises the Python logging module to log informational and error messages. The logs are saved in the `coding_Challenge.log` file. The log file is created in the same directory as the module. It also captures the outcome of the challenge and other errors if exist.
+Example from the file
+
+```
+root - INFO - Sanity Check - Highest Seat Number : 871
+root - INFO - Your Seat Number : 640
+```
 
 ## License
 
 NA.
 
-## Acknowledgments
-NA
+## Author
+<a href="https://www.linkedin.com/in/surendersampath/" title="Title Text">Surender Sampath </a>
+
