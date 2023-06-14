@@ -2,15 +2,15 @@
 
 # Boarding Pass Finder
 
-The Boarding Pass Finder is a Python module that decodes seat numbers from boarding pass strings and finds the missing seat number from a list of scanned boarding pass data.
+The Boarding Pass Finder is a Python module that decodes seat numbers from boarding pass strings and finds the missing seat number from a list of scanned boarding pass data by elimniation method.
 
 ## Requirements
 
-- Python 3.6 and above.
+- Python 3.6 and above. Can be run in Github codespace.
 
 ## Installation
 
-No installation is required for the Boarding Pass Finder module. Simply clone the repo and make sure you have the gitlab actions setup. Commit on the master will perform unit testing. Otherwise, refer unit testing command below.
+No installation is required for the Boarding Pass Finder module. Simply clone the repo and make sure you have the gitlab actions setup. Commit on the master will perform unit testing. Otherwise, refer unit testing command below. Can be run in Github codespace.
 
 ## Usage
 
@@ -24,6 +24,7 @@ print(seat_number)  # Output: 567
 ```
 
 2. Find the missing seat number from a set of scanned boarding pass data using the `find_seat_from_scanned_boarding_pass` function:
+   All the scanned boarding passes are loaded into a set from the textfile and then passed on this function during the unit tests.
 
 ```python
 scanned_boarding_pass_data = {"BFFFBBFRRR", "FFFBBBFRRR", "BBFFBBFRLL"}
@@ -37,14 +38,14 @@ The module includes unit tests for the `decode_seat_number_from_boarding_pass` a
 The test cases can be executed by running the module as follows:
 
 ```bash
-python boardingpassfinder.py
+python unittests.py
 ```
 
-The test results will be displayed in the console of the CI/CD pipeline.
+The test results of the unit tests will be displayed in the console of the CI/CD pipeline.
 
 ## Logging
 
-The module utilizes the Python logging module to log informational and error messages. The logs are saved in the `coding_Challenge.log` file. The log file is created in the same directory as the module. It also captures the outcome of the challenge and other errors if exist.
+The module utilises the Python logging module to log informational and error messages. The logs are saved in the `coding_Challenge.log` file. The log file is created in the same directory as the module. It also captures the outcome of the challenge and other errors if exist.
 
 ## License
 
